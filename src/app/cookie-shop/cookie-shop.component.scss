@@ -1,0 +1,97 @@
+$primary-color: #ffb347;
+$secondary-color: #ffebcd;
+$button-color: #919191;
+
+.cookie-shop {
+  text-align: center;
+  //background-color: $secondary-color;
+  padding: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  h1 {
+    color: $primary-color;
+  }
+
+  .cookies-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .cookie-item {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      width: 250px;
+      transition-duration: 0.5s;
+
+      .cookie-img {
+        height: 150px;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        color: $primary-color;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        margin-bottom: 10px;
+        border: 1px solid rgb(29, 29, 29);
+        border-radius: 10px;
+        padding: 10px;
+        background-color: rgb(0, 0, 0);;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      @keyframes price-change {
+        0% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(1.2);
+        }
+        50% {
+          transform: scale(0.8);
+        }
+        75% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .buy-button {
+        background-color: $button-color;
+        border: none;
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px;
+        transition: all 0.3s;
+        width: 100%;
+
+        &:hover {
+          background-color: darken($button-color, 10%);
+        }
+      }
+    }
+  }
+}

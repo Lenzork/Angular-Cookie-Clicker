@@ -1,0 +1,21 @@
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 30%;
+  right: 0;
+  margin: auto;
+}
+
+#cookie {
+  animation: rotate-cookie 50s infinite linear;
+}
+
+@keyframes rotate-cookie {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

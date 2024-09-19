@@ -1,0 +1,11 @@
+<div class="cookie-shop">
+    <div class="cookies-container">
+      <div class="cookie-item" *ngFor="let item of shopItems">
+        <h2>{{item.name}}</h2>
+        <h4>{{item.description}}</h4>
+        <p>{{item.price}} Cookies</p>
+        <button class="buy-button" (click)="buyShopItem(item.name, item.price)">Buy</button>
+      </div>
+    </div>
+  </div>
+  
